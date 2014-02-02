@@ -104,7 +104,6 @@ public class MenuActivity extends Activity {
             List<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
             String strResult = results.get(0);
             if (!strResult.isEmpty()) {
-	            Log.e("TAG", strResult);
 	            SharedPreferences prefs = this.getSharedPreferences(getPackageName(), Context.MODE_PRIVATE);
 	            prefs.edit().putString(WORDS_KEY, strResult).commit();
             }
